@@ -5,7 +5,7 @@ FROM oven/bun:latest
 WORKDIR /app
 
 # Copy package files and lockfile first for better caching
-COPY package.json bun.lock ./
+COPY package.json bun.lockb ./
 
 # Install dependencies
 RUN bun install
@@ -13,8 +13,11 @@ RUN bun install
 # Copy all remaining files, including code, static assets, etc.
 COPY . .
 
-# Expose the port your Bun app uses
+# Build the Next.js app for production
+RUN bun run build
+
+# Expose the port your Next.js app will use
 EXPOSE 3000
 
-# Start the Bun app (adjust entry point if needed)
+# Start the Next.js production server
 CMD ["bun", "run", "start"]
