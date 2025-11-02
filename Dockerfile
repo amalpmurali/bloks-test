@@ -19,5 +19,9 @@ RUN bun run build
 # Expose the port your Next.js app will use
 EXPOSE 3000
 
+# Set environment variables to bind to all interfaces
+ENV HOST 0.0.0.0
+ENV PORT 3000
+
 # Start the Next.js production server
 CMD ["bun", "run", "start"]
