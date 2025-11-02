@@ -1,0 +1,34 @@
+.items {
+  background: white;
+  border-radius: 0.5rem;
+  box-shadow:
+    0 0 0 1px rgba(0, 0, 0, 0.05),
+    0px 10px 20px rgba(0, 0, 0, 0.1);
+  padding: 0.2rem;
+  margin: 0.5rem 0;
+}
+
+.item {
+  display: block;
+  width: 100%;
+  text-align: left;
+  background: transparent;
+  border: none;
+  padding: 0.4rem 0.6rem;
+  font-size: 0.9rem;
+  color: #000;
+  border-radius: 0.3rem;
+}
+
+.item:hover {
+  background-color: #f1f5f9;
+  cursor: pointer;
+}
+
+.item.is-selected {
+  background-color: #e2e8f0;
+}
+
+.tippy-box[data-animation="fade"][data-state="hidden"] {
+  opacity: 0;
+}
