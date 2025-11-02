@@ -10,10 +10,10 @@ COPY package.json bun.lockb ./
 # Install dependencies
 RUN bun install
 
-# Copy the rest of the application code
+# Copy all remaining files, including code, static assets, etc.
 COPY . .
 
-# Expose port (adjust if your app uses a different port)
+# Expose the port your Bun app uses
 EXPOSE 3000
 
 # Start the Bun app (adjust entry point if needed)
