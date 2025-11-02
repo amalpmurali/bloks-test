@@ -1,0 +1,100 @@
+{
+  "$schema": "https://ui.shadcn.com/schema.json",
+  "name": "bloks.dev",
+  "homepage": "https://bloks.dev",
+  "items": [
+    {
+      "name": "component-showcase",
+      "type": "registry:component",
+      "title": "Component Showcase",
+      "description": "A brutalist-styled component for showcasing React components with their code examples, featuring tabbed navigation between preview and code views.",
+      "dependencies": ["lucide-react"],
+      "registryDependencies": ["cn"],
+      "files": [
+        {
+          "path": "components/ui/component-showcase.tsx",
+          "type": "registry:component",
+          "target": "~/components/ui/component-showcase.tsx"
+        }
+      ]
+    },
+    {
+      "name": "brutalist-buttons",
+      "type": "registry:component",
+      "title": "Brutalist Buttons",
+      "description": "Brutalist style buttons with multiple variants",
+      "registryDependencies": ["button"],
+      "files": [
+        {
+          "path": "registry/brutalist/buttons/button.tsx",
+          "type": "registry:component"
+        }
+      ]
+    },
+    {
+      "name": "email-composer",
+      "type": "registry:component",
+      "title": "Email Composer",
+      "description": "A Gmail-like email composer",
+      "dependencies": [
+        "@tiptap/react",
+        "@tiptap/starter-kit",
+        "@tiptap/extension-placeholder",
+        "@tiptap/extension-link",
+        "@tiptap/extension-image",
+        "@tiptap/extension-text-align",
+        "@tiptap/extension-underline",
+        "@tiptap/extension-color",
+        "@tiptap/extension-text-style",
+        "@react-email/components",
+        "@react-email/render",
+        "lucide-react"
+      ],
+      "registryDependencies": [
+        "button",
+        "input",
+        "card",
+        "dialog",
+        "tabs",
+        "badge"
+      ],
+      "files": [
+        {
+          "path": "registry/email-composer/components/email-ui/email-composer.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/email-composer/components/email-ui/custom-editor.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/email-composer/components/email-ui/email-multi-select.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/email-composer/components/email-ui/email-preview.tsx",
+          "type": "registry:component"
+        },
+        {
+          "path": "registry/email-composer/page.tsx",
+          "type": "registry:page",
+          "target": "app/email-composer/page.tsx"
+        },
+        {
+          "path": "registry/email-composer/lib/email-transformer.ts",
+          "type": "registry:lib"
+        },
+        {
+          "path": "registry/email-composer/editor.css",
+          "type": "registry:component",
+          "target": "~/components/email-ui/editor.css"
+        },
+        {
+          "path": "registry/email-composer/api/transform-email/route.ts",
+          "type": "registry:page",
+          "target": "app/api/transform-email/route.ts"
+        }
+      ]
+    }
+  ]
+}

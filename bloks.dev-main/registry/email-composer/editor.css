@@ -1,0 +1,73 @@
+.ProseMirror {
+  padding: 1rem;
+  border-radius: 0.5rem;
+  min-height: 200px;
+  outline: none;
+}
+
+.ProseMirror p.is-editor-empty:first-child::before {
+  color: hsl(var(--muted-foreground));
+  content: attr(data-placeholder);
+  float: left;
+  height: 0;
+  pointer-events: none;
+}
+
+/* Light mode styles */
+:root {
+  --editor-text: hsl(var(--foreground));
+  --editor-placeholder: hsl(var(--muted-foreground));
+}
+
+/* Dark mode styles */
+[data-theme="dark"] .ProseMirror {
+  --editor-text: hsl(var(--foreground));
+  --editor-placeholder: hsl(var(--muted-foreground));
+}
+
+.ProseMirror {
+  color: var(--editor-text);
+}
+
+.ProseMirror p {
+  color: var(--editor-text);
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3,
+.ProseMirror h4,
+.ProseMirror h5,
+.ProseMirror h6 {
+  color: var(--editor-text);
+}
+
+.ProseMirror a {
+  color: hsl(var(--primary));
+}
+
+.ProseMirror blockquote {
+  border-left-color: hsl(var(--border));
+  color: var(--editor-text);
+}
+
+.ProseMirror pre {
+  background: hsl(var(--secondary));
+  color: var(--editor-text);
+}
+
+.ProseMirror code {
+  background: hsl(var(--secondary));
+  color: var(--editor-text);
+}
+
+.ProseMirror ul,
+.ProseMirror ol {
+  color: var(--editor-text);
+}
+
+.ProseMirror img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 0.5rem;
+}
