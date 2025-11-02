@@ -10,6 +10,7 @@ COPY package.json bun.lock ./
 # Install dependencies
 RUN bun install
 
+
 # Copy all remaining files, including code, static assets, etc.
 COPY . .
 
